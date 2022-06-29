@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="showPlayer.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>ShowMovies</title>
 </head>
 <body>
+
+    
+    <div id="player"></div>
+    <script>
+      var player = new Clappr.Player({source: "https://abra--8ac92139.api.webtor.buzz/77a9386c6557dc78a7e1c5f8c2c0108e5ff1df0a/Men%20(2022)%20%5B720p%5D%20%5BWEBRip%5D%20%5BYTS.MX%5D%2FMen.2022.720p.WEBRip.x264.AAC-%5BYTS.MX%5D.mp4~tc/Men.2022.720p.WEBRip.x264.AAC-%5BYTS.MX%5D.mp4~mtrc/index.m3u8?user-id=fb7ed69cd8a8b71626871de917fd481c&download-id=5331a8e1b8745a3de913dc532c31f592&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMDMuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInJlbW90ZUFkZHJlc3MiOiIzMS4yMDYuMTUuMTM0IiwiZG9tYWluIjoieXRzLnJzIiwiZXhwIjoxNjU3MTIxNjA1LCJzZXNzaW9uSUQiOiJoLU9UOUg3SnhjNW5hNDNOREt2czFPTVQ4WXBsc0xXYSIsInJhdGUiOiIxME0iLCJyb2xlIjoibm9ib2R5In0.tw8JxnNgNWQSg7klpgwb8EFDMGPyATy3ECUNTSC-Ihc&api-key=8acbcf1e-732c-4574-a3bf-27e6a85b86f1", parentId: "#player"});
+    </script>
+  
+
     
     <div class="video-player">
         <video src="c.mp4" poster="Poster.jpg" class="video" ></video>
@@ -18,7 +28,14 @@
                 <div class="video-progress-filled"></div>
               </div>
 
+              <div class="inner-player-controls">
+
           <button class="play-button" title="Play">Play</button>  
+          
+          <button class="mute controls-button" aria-label="mute">
+            <div class="slash"></div>
+            <i class="fas fa-volume-up"></i>
+          </button>
         
           <input 
           type="range" 
@@ -29,6 +46,10 @@
           value="1"
           />
 
+          <button class="fullsecreen controls-button "aria-label="fullscreen">
+          <i class="fa-solid fa-expand"></i>
+          </button>
+
           <div class="time">
           <span 
           class="current">0:00</span>/
@@ -36,8 +57,9 @@
           class="duration">0:00</span>
           </div>
         </div>
+        </div>
 
     </div>
     <script src="showPlayer.js"></script>
-</body>
+
 </html>
